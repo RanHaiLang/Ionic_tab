@@ -1,0 +1,51 @@
+<!--
+  Generated template for the LicenseDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (tap)="backPage()"></ion-icon>
+    <div class="title_div"><span>许可证详情</span></div>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-auto>编号：</ion-col>
+      <ion-col><ion-input readonly="true" [(ngModel)]="licenseDetail.pev_code"></ion-input></ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-auto>许可证：</ion-col>
+      <ion-col><ion-input readonly="true" [(ngModel)]="licenseDetail.pev_permit"></ion-input></ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-auto>许可证描述：</ion-col>
+      <ion-col><ion-input readonly="true" [(ngModel)]="licenseDetail.pev_permitdesc"></ion-input></ion-col>
+      <ion-col col-auto></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-auto><span style="color: red">*</span>是否可用：</ion-col>
+      <ion-col radio-group [(ngModel)]="licenseDetail.pev_active">
+        <ion-item>
+          <ion-label>是</ion-label>
+          <ion-radio value="+"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>否</ion-label>
+          <ion-radio value="-"></ion-radio>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer *ngIf="evt_rstatus!='C'">
+  <div class="footerDiv">
+    <button ion-button (tap)="submitLicenseDetail()">保存</button>
+  </div>
+</ion-footer>

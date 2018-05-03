@@ -1,0 +1,31 @@
+<div class="one_div">
+  <div class="abroad_div">
+    <div class="top_div">
+      <ion-icon name="ios-arrow-back" (tap)="dismiss('')"></ion-icon>
+      <div class="title_div"><span>{{title}}</span></div>
+    </div>
+    <ion-content>
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="下拉刷新"
+          refreshingSpinner="circles"
+          refreshingText="正在刷新...">
+        </ion-refresher-content>
+      </ion-refresher>
+      <ion-row>
+        <ion-col>代码</ion-col>
+      </ion-row>
+      <ion-row (tap)="dismiss('无')">
+        <ion-col>========无========</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let y of currency" (tap)="dismiss(y)">
+        <ion-col>{{y.com_code}}</ion-col>
+      </ion-row>
+      <div style="text-align: center;background-color: gainsboro;" *ngIf="f==true">以显示全部</div>
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </ion-content>
+  </div>
+</div>

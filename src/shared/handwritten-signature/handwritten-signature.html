@@ -1,0 +1,14 @@
+
+<div #contentEl class="content_div">
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (click)="dismiss()"></ion-icon>
+    <div class="title_div"><span>手写签名</span></div>
+  </div>
+
+  <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+
+  <ion-row>
+    <ion-col col-6><button ion-button block [disabled]="signaturePad.isEmpty()" (click)="empty()">清除</button></ion-col>
+    <ion-col col-6><button ion-button block [disabled]="signaturePad.isEmpty()" (click)="save()">确定</button></ion-col>
+  </ion-row>
+</div>

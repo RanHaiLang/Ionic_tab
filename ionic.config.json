@@ -1,0 +1,14 @@
+{
+  "name": "MyThirdApp",
+  "app_id": "",
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/mail",
+      "proxyUrl": "http://192.168.3.137:8080/mail"
+    }
+  ],
+  "integrations": {
+    "cordova": {}
+  }
+}

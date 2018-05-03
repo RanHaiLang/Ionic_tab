@@ -1,0 +1,81 @@
+<!--
+  Generated template for the XukejianchaxiangDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (click)="backPage()"></ion-icon>
+    <div class="title_div"><span>许可证检查项</span></div>
+    <label>{{index}}/{{totalNumber}}</label>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <ion-row>
+    <ion-col>{{index}}.{{xunzhanjiancha.tsk_desc}}</ion-col>
+  </ion-row>
+  <ion-grid radio-group [(ngModel)]="danxuan" (ionChange)="danxuans()" *ngIf="xunzhanjiancha.tsk_class=='XX-SS'">
+    <ion-row *ngFor="let x of xunzhanxuanxiang"><!--单选-->
+      <ion-col col-11>
+        <ion-item>
+          <ion-label>{{x.tch_desc}}</ion-label>
+          <ion-radio value="{{x.tch_desc}}"></ion-radio>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-row *ngFor="let x of xunzhanxuanxiang;let i=index"><!--多选-->
+    <ion-col col-11  *ngIf="xunzhanjiancha.tsk_class=='XX-MS'">
+      <ion-item>
+        <ion-label>{{x.tch_desc}}</ion-label>
+        <ion-checkbox checked="{{x.tch_code==true}}" (tap)="duoxuan(x.tch_desc,i)"></ion-checkbox>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let x of xunzhanxuanxiang;let i=index"><!--输入-->
+      <ion-col col-11  *ngIf="xunzhanjiancha.tsk_class=='XX-QA'">
+        <ion-row>
+          <ion-col>({{i+1}})、{{x.tch_desc}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-input (ionChange)="wendas(i,$event)" value="{{x.tch_sequence}}"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+  </ion-row>
+
+  <ion-grid>
+    <ion-row><ion-col>问题描述</ion-col></ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="desc_div">
+          <!--<ion-textarea placeholder="输入描述" [(ngModel)]="problemdesc.add_text"></ion-textarea>-->
+          {{problemdesc.add_text}}
+          <page-select-pic [(fileObjList)]="filePaths"></page-select-pic>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <div class="footerDiv">
+      <div class="bottom_div">
+        <div class="button_div">
+          <button ion-button [disabled]="index==1" (tap)="PreviousItem()">上一项</button>
+        </div>
+        <div class="button_div">
+          <button ion-button *ngIf="index < totalNumber&&evt_rstatus!='C'" (tap)="NextItem('')">下一项</button>
+        </div>
+        <div class="button_div">
+          <button ion-button *ngIf="index==totalNumber&&evt_rstatus!='C'" (tap)="NextItem('submit')">提交</button>
+        </div>
+      </div>
+  </div>
+</ion-footer>

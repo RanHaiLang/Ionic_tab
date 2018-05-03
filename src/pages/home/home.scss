@@ -1,0 +1,86 @@
+page-home {
+  .div-charts {
+    width: 100%;
+    height: 100%;
+  }
+  .titleClass{
+    width: 100%;
+    height: 50px;
+    padding-left: 5%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+    background-color: #EFEFEF;
+  }
+  .canvasClass{
+    width: 100%;
+    //height: 300px;
+    background-color: #EFEFEF;
+    text-align: center;
+    overflow: hidden;
+  }
+  .canvas{
+    width: 100%;
+    height: 310px;
+    margin-top: 5px;
+  }
+
+  .contentClass{
+    width: 100%;
+    height: 300px;
+    //font-size: 12px;
+    overflow: hidden;
+    box-shadow: 0 -7px 13px 0px #dcdcdc;
+  }
+  .button_divs{
+    width: 25vw;
+    height: 26vw;
+    margin:10px 0;
+    text-align: center;
+    float: left;
+    display: inline-block;
+  }
+  .button_divs:active{
+    background-color: #f6f6f6;
+  }
+  .button_div{
+    margin-top: 6vw;
+    font-size: 12px;
+    position: relative;
+  }
+  .iconfont{
+    font-size: 10vw;
+  }
+  .weihu{
+    color: #EC921D;
+  }
+  .xunzhan{
+    color: #DC3C2A;
+  }
+  .gaizao{
+    color: #3EAE95;
+  }
+  .xiaoweixiu{
+    color: #7047EE;
+  }
+  .jiuzhengxingweixiu{
+    color: #328DD9;
+  }
+  .xukezheng{
+    color: #4DB139;
+  }
+
+  .button_div span{
+    min-width: 18px;
+    background-color: red;
+    position: absolute;
+    color: #fff;
+    border-radius: 10px;
+    top: 0;
+    left: 64%;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 1px 3px;
+    vertical-align: middle;
+  }
+}

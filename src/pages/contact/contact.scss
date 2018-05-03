@@ -1,0 +1,17 @@
+page-contact {
+  .col:nth-child(2){
+    text-align: right;
+  }
+  .row {
+    line-height: 40px;
+    border-bottom: 1px solid #C8C7CC;
+  }
+  .row:nth-child(1){
+    margin-top: 20px;
+  }
+
+  .footDiv{
+    text-align: center;
+    margin-top: 20%;
+  }
+}

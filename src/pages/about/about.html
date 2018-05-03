@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="YYYY-MM-DD HH:mm" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <button ion-button (click)="default()">Default</button>
+    <button ion-button (click)="clickButton()">版本更新</button>
+    <button ion-button (click)="clickMenu()">侧栏菜单</button>
+    <button ion-button (click)="suijishu()">随机数</button>
+  </ion-item>
+
+  <page-select-pic [(fileObjList)]="fileObjList" [max]="6"></page-select-pic>
+
+  <div padding-vertical>
+    <canvas #container height="500"></canvas>
+  </div>
+
+</ion-content>

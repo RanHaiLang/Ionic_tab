@@ -1,0 +1,31 @@
+<ion-header>
+  <div class="top_div">
+    <div class="title_div"><span>个人设置</span></div>
+  </div>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>当前用户：</ion-col>
+      <ion-col>{{username}}</ion-col>
+    </ion-row>
+    <ion-row (tap)="goModify()">
+      <ion-col>修改密码：</ion-col>
+      <ion-col><i class="iconfont">&#xe61e;</i></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>当前版本</ion-col>
+      <ion-col>{{httpService.curreentversion}}</ion-col>
+    </ion-row>
+    <ion-row (tap)="goAboutus()">
+      <ion-col>关于我们</ion-col>
+      <ion-col><i class="iconfont">&#xe61e;</i></ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="footDiv">
+    <button ion-button (tap)="loginOut()">退出登录</button>
+  </div>
+</ion-content>

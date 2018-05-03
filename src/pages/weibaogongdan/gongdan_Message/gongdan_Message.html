@@ -1,0 +1,27 @@
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (click)="backPage()"></ion-icon>
+    <div class="title_div"><span>检修维保工单</span></div>
+    <ion-icon name="menu" menuToggle></ion-icon>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>
+    <i class="iconfont">&#xe601;&nbsp;工单信息</i>
+  </ion-list-header>
+  <ion-grid>
+    <ion-row><ion-col col-auto>工单号：</ion-col><ion-col>59289</ion-col></ion-row>
+    <ion-row><ion-col col-auto>工单描述：</ion-col><ion-col>机体粗犷凸轮轴孔及挺杆孔口组合机床DK093故障停机</ion-col></ion-row>
+    <ion-row><ion-col col-auto>工单类型：</ion-col><ion-col>故障维修</ion-col></ion-row>
+    <ion-row><ion-col col-auto>设备编码：</ion-col><ion-col>100440526</ion-col></ion-row>
+    <ion-row><ion-col col-auto>设备名称：</ion-col><ion-col>机体粗犷凸轮轴孔及挺杆孔口组合机床DK093故障停机</ion-col></ion-row>
+    <ion-row><ion-col col-auto>生产线(工部)：</ion-col><ion-col>QTS蓝擎一起机体刚性线</ion-col></ion-row>
+    <ion-row><ion-col col-auto>维修班组：</ion-col><ion-col></ion-col></ion-row>
+    <ion-row><ion-col col-auto>指派维修工：</ion-col><ion-col></ion-col></ion-row>
+  </ion-grid>
+  <ion-list-header>
+    <i class="iconfont">&#xe633;&nbsp;图片信息</i>
+  </ion-list-header>
+  <page-select-pic [(fileObjList)]="fileObjList" [max]="6"></page-select-pic>
+</ion-content>

@@ -1,0 +1,41 @@
+page-license-detail {
+  ion-grid:nth-child(1) .row {
+    line-height: 30px;
+    margin-left: 5%;
+  }
+  .row{
+    margin-left: 5%;
+  }
+
+
+  ion-row ion-col:nth-child(1){
+    color: gray;
+  }
+  ion-input{
+    height:30px;
+  }
+  .text-input{
+    margin-top: 0px;
+    text-align: right;
+  }
+  ion-grid:nth-child(1) ion-row{
+    border-bottom: 1px solid #C8C7CC;
+  }
+  ion-grid:nth-child(1) ion-row:nth-child(4) ion-col{
+    color: black;
+  }
+
+  .item-ios{
+    width: 46%;
+    display: inline-block;
+  }
+  .item-block{
+    min-height: 2.4rem;
+  }
+  .item-ios .radio-ios {
+     margin: 0;
+  }
+  .label-ios{
+    margin: 0;
+  }
+}

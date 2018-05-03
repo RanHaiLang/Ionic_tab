@@ -1,0 +1,16 @@
+<div class="one_div">
+  <div class="abroad_div">
+    <div class="top_div">
+      <ion-icon name="ios-arrow-back" (tap)="dismiss('')"></ion-icon>
+      <div class="title_div"><span>{{title}}</span></div>
+    </div>
+    <ion-content>
+      <ion-row (tap)="dismiss('无')">
+        <ion-col>========无========</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let y of riskPriorty" (tap)="dismiss(y)">
+        <ion-col>{{y.uco_desc}}</ion-col>
+      </ion-row>
+    </ion-content>
+  </div>
+</div>

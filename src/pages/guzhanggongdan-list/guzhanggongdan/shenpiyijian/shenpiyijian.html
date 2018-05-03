@@ -1,0 +1,27 @@
+<!--
+  Generated template for the ShenpiyijianPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (click)="backPage()"></ion-icon>
+    <div class="title_div"><span>检修维保工单</span></div>
+    <ion-icon name="menu" menuToggle></ion-icon>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>
+    <i class="iconfont">&#xe699;&nbsp;审批意见</i>
+  </ion-list-header>
+  <ion-list>
+    <div class="ionlistDiv" *ngFor="let g of shenpijianList">
+      <div class="itemDiv"><label>{{g.name}}</label><span>{{g.time}}</span></div>
+      <div class="itemDiv">
+        {{g.message}}
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

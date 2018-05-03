@@ -1,0 +1,96 @@
+<!--
+  Generated template for the XiaoweixiugongdanMessagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (tap)="backPage()"></ion-icon>
+    <div class="title_div"><span>新增小维修工单</span></div>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="MessageForm">
+    <ion-list-header>
+      <i class="iconfont">&#xe601;&nbsp;工单信息</i>
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-auto>单号：</ion-col>
+        <ion-col><ion-input readonly="true" formControlName="evt_code"></ion-input></ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><span style="color: red">*</span>工单描述：</ion-col>
+        <ion-col>
+          <ion-input formControlName="evt_desc"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <!--<ion-row (tap)="getShebei()">
+        <ion-col col-auto>设备描述：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="obj_desc"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>-->
+      <ion-row>
+        <ion-col col-auto>油站名称：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="des_text"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <!--<ion-row (tap)="openTime('evt_start')">
+        <ion-col col-auto>开始日期：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="evt_start"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row (tap)="openTime('evt_completed')">
+        <ion-col col-auto>结束日期：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="evt_completed"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>-->
+      <ion-row (tap)="getSupplier()">
+        <ion-col col-auto>供应商：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="com_desc"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto>供应商人数：</ion-col>
+        <ion-col>
+          <ion-input type="number" formControlName="evt_udfnum01"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><span style="color: red">*</span>小维修金额：</ion-col>
+        <ion-col>
+          <ion-input type="number" formControlName="evt_udfnum02"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto>维修概述：</ion-col>
+        <ion-col>
+          <ion-input formControlName="evt_workaddress"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+<ion-footer>
+  <div class="footerDiv">
+    <button ion-button (tap)="submitMessage()">保存</button>
+  </div>
+</ion-footer>

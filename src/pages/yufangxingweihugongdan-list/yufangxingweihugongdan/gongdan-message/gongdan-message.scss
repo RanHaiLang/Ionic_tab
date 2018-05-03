@@ -1,0 +1,48 @@
+page-gongdan-message {
+  .list-header{
+    background-color: #EBEBEB;
+    border-bottom: 0px;
+  }
+  .list-header i{
+    color: #007aff;
+  }
+  .row {
+    line-height: 30px;
+    border-bottom: 1px solid #C8C7CC;
+  }
+  ion-input{
+    height:30px;
+  }
+  .text-input{
+    color: gray;
+    margin-top: 0px;
+    text-align: right;
+  }
+  .text-input[disabled] {
+    opacity: 0;
+  }
+  .grid i{
+    color: #c8c7cc;
+  }
+  .grid ion-row:nth-child(6) ion-col:nth-child(1),
+  .grid ion-row:nth-child(7) ion-col:nth-child(1),
+  .grid ion-row:nth-child(10) ion-col:nth-child(1),
+  .grid ion-row:nth-child(11) ion-col:nth-child(1){
+    color: black;
+  }
+  ion-content{
+    background-color: white;
+  }
+  ion-row ion-col:nth-child(1){
+    color: gray;
+  }
+
+  .qianming{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+  }
+  .scroll-content{
+    margin-bottom: 55px;
+  }
+}

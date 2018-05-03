@@ -1,0 +1,96 @@
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (tap)="backPage()" title="返回"></ion-icon>
+    <div class="title_div"><span>新增工作许可证</span></div>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="MessageForm">
+    <ion-list-header>
+      <i class="iconfont">&#xe601;&nbsp;许可证信息</i>
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-auto>单号：</ion-col>
+        <ion-col><ion-input readonly="true" formControlName="evt_code"></ion-input></ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><span style="color: red">*</span>许可证描述：</ion-col>
+        <ion-col>
+          <ion-input formControlName="evt_desc"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row (tap)="getLicenseCategory()">
+        <ion-col col-auto><span style="color: red">*</span>许可证分类：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="uco_desc2"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row (tap)="getYouzhan()">
+        <ion-col col-auto><span style="color: red">*</span>油站名称：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="des_text"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row (tap)="getRisk()">
+        <ion-col col-auto><span style="color: red">*</span>风险等级：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="uco_desc3"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><span style="color: red">*</span>施工区域：</ion-col>
+        <ion-col>
+          <ion-input formControlName="evt_udfchar01"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><span style="color: red">*</span>施工内容介绍：</ion-col>
+        <ion-col>
+          <ion-input formControlName="evt_workaddress"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row (tap)="getJobNumber()">
+        <ion-col col-auto><span style="color: red">*</span>工单号：</ion-col>
+        <ion-col><ion-input readonly="true" formControlName="evt_parent"></ion-input></ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row (tap)="getSupplier()">
+        <ion-col col-auto><span style="color: red">*</span>供应商：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="com_desc"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <!--<ion-row (tap)="openTime('evt_start')">
+        <ion-col col-auto><span style="color: red">*</span>开始时间：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="evt_start"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row (tap)="getDepartment()">
+        <ion-col col-auto><span style="color: red">*</span>部门：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="evt_mrcdesc"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>-->
+
+    </ion-grid>
+  </form>
+</ion-content>
+<ion-footer>
+  <div class="footerDiv">
+    <button ion-button (tap)="submitMessage()">保存</button>
+  </div>
+</ion-footer>

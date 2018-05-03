@@ -1,0 +1,41 @@
+<!--
+  Generated template for the GuzhanggongdanListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (click)="backPage()"></ion-icon>
+    <div class="title_div"><span>故障工单列表</span></div>
+    <ion-icon name="qr-scanner"></ion-icon>
+  </div>
+  <ion-searchbar placeholder="搜索"
+                 showCancelButton="true"
+                 cancelButtonText="取消"
+                 (ionInput)="getItems($event)">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let b of GuZhangList" (click)="goGuzhanggongdan()">
+    <ion-card-title>
+      <ion-row><ion-col col-auto>单号：</ion-col><ion-col col-auto>{{b.code}}</ion-col></ion-row>
+    </ion-card-title>
+
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-auto>工单名称：</ion-col><ion-col>{{b.name1}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto>设备名称：</ion-col><ion-col>{{b.name2}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-row>
+        <ion-col col-auto>工单类型：</ion-col><ion-col col-auto>{{b.type}}</ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

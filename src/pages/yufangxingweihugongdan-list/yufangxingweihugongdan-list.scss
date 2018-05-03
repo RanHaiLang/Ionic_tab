@@ -1,0 +1,15 @@
+page-yufangxingweihugongdan-list {
+  .card-title-ios{
+    border-bottom: 1px solid #EBEBEB;
+    padding: 0px 0;
+  }
+  .card-header-ios{
+    padding: 0px;
+  }
+  .card-content-ios {
+    padding: 0px 16px 0px;
+  }
+  ion-content.has-refresher > .scroll-content{
+    background-color: #F3F3F3;
+  }
+}

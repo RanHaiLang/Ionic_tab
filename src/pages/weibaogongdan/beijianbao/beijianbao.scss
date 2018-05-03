@@ -1,0 +1,11 @@
+page-beijianbao {
+  .grid{
+    border-bottom: 1px solid #c8c7cc;
+  }
+  .row{
+    margin-left: 5%;
+  }
+  ion-row ion-col:nth-child(1){
+    color: gray;
+  }
+}

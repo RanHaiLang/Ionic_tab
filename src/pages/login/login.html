@@ -1,0 +1,43 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<body>
+  <div class="logoClass">
+    <img src="./assets/images/logo.png" style="width: 100px;"/>
+  </div>
+
+  <div class="titleClass">
+    <span style="font-size: 20px">道达尔油站维修管理系统</span>
+  </div>
+
+  <form [formGroup]="userForm" (ngSubmit)="loginClick()">
+    <div class="userClass">
+      <div class="user_input">
+        <i class="iconfont">&#xe626;</i>
+        <input type="text" formControlName="username" placeholder="账号" style="text-transform:uppercase;">
+        <i class="iconfont" (click)="getuserList()">&#xe612;</i>
+      </div>
+    </div>
+    <!--<div *ngIf="verifyMessages.username.errorMsg" class="validation-failed">{{verifyMessages.username.errorMsg}}</div>-->
+    <div class="passClass">
+      <div class="user_input" style="width: 80%">
+        <i class="iconfont">&#xe62c;</i>
+        <input type="password" formControlName="password" placeholder="请输入登录密码">
+      </div>
+    </div>
+    <!--<div *ngIf="verifyMessages.password.errorMsg" class="validation-failed">{{verifyMessages.password.errorMsg}}</div>-->
+    <div class="loginClass3">
+      <a href="#" (click)="nativeService.showAlert('请联系管理员重置密码')">忘记密码</a>
+    </div>
+    <div class="buttonClass">
+      <button class="btn btn-default" type="submit"><span style="color:white;font-size: 20px ">登录</span></button> <!--[disabled]="!userForm.valid"-->
+    </div>
+  </form>
+
+  <div class="bottom">
+    <span>@2017&nbsp;&nbsp;上海人脉信息技术股份有限公司</span>
+  </div>
+</body>

@@ -1,0 +1,73 @@
+<ion-header>
+  <div class="top_div">
+    <div class="title_div"><span>道达尔油站维修管理系统</span></div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <!--<div class="titleClass">月度工单数量统计</div>-->
+  <div class="canvasClass">
+    <div #container class="canvas">
+      <div *ngIf="e==false" style="width: 100%;text-align: center;">
+        <p>网络异常，请刷新重试</p>
+        <button ion-button (tap)="getKpi()" style="width: 30%">刷新</button>
+      </div>
+    </div>
+  </div>
+  <div class="contentClass">
+    <div *ngIf="u==false" style="width: 100%;height:200px;text-align: center;">
+      <p>网络异常，请刷新重试</p>
+      <button ion-button style="width: 30%" (tap)="userView()">刷新</button>
+    </div>
+    <div *ngFor="let b of buttonshow">
+      <div class="button_divs" tappable (tap)="OpenPage('YufangxingweihugongdanListPage',b.uscudfchar05)" *ngIf="b.uscasccode=='YFXWH'">
+        <div class="button_div">
+         <i class="iconfont weihu">&#xe606;</i>
+          <p>预防性维护</p>
+          <span *ngIf="b.uscudfchar04>0">{{b.uscudfchar04}}</span>
+          <span *ngIf="b.uscudfchar04>99">99+</span>
+        </div>
+      </div>
+      <div class="button_divs" (tap)="OpenPage('XunzhangongdanListPage',b.uscudfchar05)" *ngIf="b.uscasccode=='XZ'">
+        <div class="button_div">
+          <i class="iconfont xunzhan">&#xe611;</i>
+          <p>巡站工单</p>
+          <span *ngIf="b.uscudfchar04>0">{{b.uscudfchar04}}</span>
+          <span *ngIf="b.uscudfchar04>99">99+</span>
+        </div>
+      </div>
+      <div class="button_divs" (tap)="OpenPage('XiangmugaizaogongdanListPage',b.uscudfchar05)" *ngIf="b.uscasccode=='XMGZ'">
+        <div class="button_div">
+          <i class="iconfont gaizao">&#xe603;</i>
+          <p>项目改造工单</p>
+          <span *ngIf="b.uscudfchar04>0">{{b.uscudfchar04}}</span>
+          <span *ngIf="b.uscudfchar04>99">99+</span>
+        </div>
+      </div>
+      <div class="button_divs" (tap)="OpenPage('XiaoweixiugongdanListPage',b.uscudfchar05)" *ngIf="b.uscasccode=='XWX'">
+        <div class="button_div">
+          <i class="iconfont xiaoweixiu">&#xe613;</i>
+          <p>小维修工单</p>
+          <span *ngIf="b.uscudfchar04>0">{{b.uscudfchar04}}</span>
+          <span *ngIf="b.uscudfchar04>99">99+</span>
+        </div>
+      </div>
+      <div class="button_divs" (tap)="OpenPage('JiuzhengxingweixiugongdanListPage',b.uscudfchar05)" *ngIf="b.uscasccode=='JZXWX'">
+        <div class="button_div">
+          <i class="iconfont jiuzhengxingweixiu">&#xe614;</i>
+          <p>普通维修</p>
+          <span  *ngIf="b.uscudfchar04>0">{{b.uscudfchar04}}</span>
+          <span *ngIf="b.uscudfchar04>99">99+</span>
+        </div>
+      </div>
+      <div class="button_divs" (tap)="OpenPage('GongzuoxukezhengListPage',b.uscudfchar05)" *ngIf="b.uscasccode=='GZXKZ'">
+        <div class="button_div">
+          <i class="iconfont xukezheng">&#xe602;</i>
+          <p>工作许可证</p>
+          <span *ngIf="b.uscudfchar04>0">{{b.uscudfchar04}}</span>
+          <span *ngIf="b.uscudfchar04>99">99+</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

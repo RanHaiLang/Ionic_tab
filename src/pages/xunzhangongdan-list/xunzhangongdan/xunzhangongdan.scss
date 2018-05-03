@@ -1,0 +1,24 @@
+page-xunzhangongdan {
+  .progress{
+    border-radius: 3px;
+    background-clip: padding-box;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background: #e5e5e5;
+    height: 10px;
+    position: relative;
+  }
+  .progress-bar{
+    float: left;
+    height: 100%;
+    font-size: 12px;
+    line-height: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: #428bca;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    transition: width .6s ease;
+  }
+
+}

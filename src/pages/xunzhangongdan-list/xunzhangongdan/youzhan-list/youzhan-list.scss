@@ -1,0 +1,32 @@
+page-youzhan-list {
+  ion-content.has-refresher > .scroll-content{
+    background-color: #e4e4e4;
+  }
+  .list-header{
+    background-color: #EBEBEB;
+    border-bottom: 0px;
+  }
+  .list-header i{
+    color: #007aff;
+  }
+  .grid{
+    padding: 5px 0 0;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+  .row {
+    line-height: 15px;
+    margin-left: 2%;
+  }
+  .row ion-col:nth-child(1){
+    color: gray;
+    text-align: center;
+  }
+  .row_div{
+    width: 100%;
+    background-color: #F3F3F3;
+  }
+  .row_div .row{
+    background-color: #F3F3F3;
+  }
+}

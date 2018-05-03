@@ -1,0 +1,14 @@
+<div class="one_div">
+  <div class="abroad_div">
+    <div class="top_div">
+      <ion-icon name="ios-arrow-back" (tap)="dismiss('')"></ion-icon>
+      <div class="title_div"><span>审批意见</span></div>
+    </div>
+    <ion-content>
+      <ion-item>
+        <ion-textarea placeholder="请填写审批意见" [(ngModel)]="opinion"></ion-textarea>
+      </ion-item>
+      <button ion-button block (tap)="submitOpinion()">提交</button>
+    </ion-content>
+  </div>
+</div>

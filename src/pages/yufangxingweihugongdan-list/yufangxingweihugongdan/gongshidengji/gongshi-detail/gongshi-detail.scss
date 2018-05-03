@@ -1,0 +1,19 @@
+page-gongshi-detail {
+  .row {
+    line-height: 30px;
+    border-bottom: 1px solid #e5e4e9;
+  }
+  ion-input{
+    height:30px;
+  }
+  .text-input{
+    margin-top: 0px;
+    text-align: right;
+  }
+  .grid i{
+    color: #c8c7cc;
+  }
+  .row:nth-child(1){
+    color: gray;
+  }
+}

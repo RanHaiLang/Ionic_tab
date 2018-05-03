@@ -1,0 +1,22 @@
+page-xunzhangongdan-list {
+  .card-title-ios{
+    border-bottom: 1px solid #EBEBEB;
+    padding: 0px 0;
+  }
+  .card-title-ios ion-row ion-col:nth-child(3){
+    text-align: right;
+  }
+  .card-header-ios{
+    padding: 0px;
+  }
+  .card-header-ios ion-row ion-col:nth-child(2){
+    text-align: right;
+    color: black;
+  }
+  .card-content-ios {
+    padding: 0px 16px 0px;
+  }
+  ion-content.has-refresher > .scroll-content{
+    background-color: #F3F3F3;
+  }
+}

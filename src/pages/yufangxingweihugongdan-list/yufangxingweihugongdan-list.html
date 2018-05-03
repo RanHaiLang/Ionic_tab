@@ -1,0 +1,53 @@
+<!--
+  Generated template for the YufangxingweihugongdanListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (click)="backPage()"></ion-icon>
+    <div class="title_div"><span>预防性维护工单列表</span></div>
+  </div>
+  <ion-searchbar placeholder="搜索"
+                 showCancelButton="true"
+                 cancelButtonText="取消"
+                 animated="true"
+                 debounce="2000"
+                 (ionInput)="getItems($event)">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新"
+      refreshingSpinner="circles"
+      refreshingText="正在刷新...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-card *ngFor="let b of weihuList" tappable (tap)="goWeixiugongdan(b.evt_code)">
+    <ion-card-title>
+      <ion-row><ion-col col-auto>单号：</ion-col><ion-col col-auto>{{b.evt_code}}</ion-col></ion-row>
+    </ion-card-title>
+
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-auto>工单描述：</ion-col><ion-col>{{b.evt_desc}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto>油站名称：</ion-col><ion-col>{{b.mrc_desc}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-row>
+        <ion-col col-auto>工单状态：</ion-col><ion-col col-auto>{{b.uco_desc}}</ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

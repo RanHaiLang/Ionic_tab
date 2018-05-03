@@ -1,0 +1,18 @@
+<div class="one_div">
+  <div class="abroad_div">
+    <div class="top_div">
+      <ion-icon name="ios-arrow-back" (tap)="dismiss('')"></ion-icon>
+      <div class="title_div"><span>活动选择</span></div>
+    </div>
+    <ion-content>
+      <ion-row>
+        <ion-col col-4>编号</ion-col>
+        <ion-col>描述</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let y of huodongList" (tap)="dismiss(y)">
+        <ion-col col-4>{{y.act_act}}</ion-col>
+        <ion-col>{{y.act_note}}</ion-col>
+      </ion-row>
+    </ion-content>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<!--
+  Generated template for the XundianjianxiangPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (click)="backPage()"></ion-icon>
+    <div class="title_div"><span>检修维保工单</span></div>
+    <ion-icon name="menu" menuToggle></ion-icon>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-auto>PM任务：</ion-col>
+      <ion-col><ion-input readonly="true" value="2017-02-12"></ion-input></ion-col>
+      <ion-col col-auto><i class="iconfont">&#xe61e;</i></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-auto>任务名称：</ion-col>
+      <ion-col><ion-input readonly="true" value="电动单梁起重机检修保养PM计划"></ion-input></ion-col>
+      <ion-col col-auto><i class="iconfont">&#xe61e;</i></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list-header>
+    <i class="iconfont">&#xe682;&nbsp;巡点检项</i>
+  </ion-list-header>
+  <ion-grid *ngFor="let g of xundianjianxiangList">
+    <ion-row><ion-col col-auto>点检内容:</ion-col><ion-col>{{g.content}}</ion-col></ion-row>
+    <ion-row><ion-col col-auto>点检说明:</ion-col><ion-col>{{g.message}}</ion-col></ion-row>
+    <ion-row><ion-col col-auto>点检结果:</ion-col><ion-col><ion-checkbox [(ngModel)]="g.return"></ion-checkbox></ion-col></ion-row>
+    <ion-row><ion-col col-auto>跟踪工单:</ion-col><ion-col><ion-checkbox [(ngModel)]="g.workorder"></ion-checkbox></ion-col></ion-row>
+    <ion-row><ion-col col-auto>点检日期:</ion-col><ion-col>{{g.time}}</ion-col></ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <div class="footerDiv">
+    <button ion-button full>保存</button>
+  </div>
+</ion-footer>

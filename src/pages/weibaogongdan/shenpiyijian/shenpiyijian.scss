@@ -1,0 +1,24 @@
+page-shenpiyijian {
+  .ionlistDiv{
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px solid #C8C7CC;
+  }
+  .itemDiv{
+    width: 90%;
+    line-height: 25px;
+    margin-left: 5%;
+    display: table;
+  }
+  .itemDiv label{
+    width:50%;
+    font-weight: 600;
+    color: black;
+    display: table-cell;
+  }
+  .itemDiv span{
+    width: 50%;
+    text-align: right;
+    display: table-cell;
+  }
+}

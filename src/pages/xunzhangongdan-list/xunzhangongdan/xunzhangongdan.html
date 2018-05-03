@@ -1,0 +1,31 @@
+<!--
+  Generated template for the XunzhangongdanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-menu id="xunzhangongdanId" [content]="menuContent" side="right">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>巡站工单</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (tap)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav #menuContent [root]="rootPage" [rootParams]="xunzhanParam"></ion-nav>
+<!--<ion-content padding>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+      60%
+    </div>
+  </div>
+</ion-content>-->

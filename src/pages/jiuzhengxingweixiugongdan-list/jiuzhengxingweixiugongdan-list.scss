@@ -1,0 +1,35 @@
+page-jiuzhengxingweixiugongdan-list {
+  .card-title-ios{
+    border-bottom: 1px solid #EBEBEB;
+    padding: 0px 0;
+  }
+  .card-header-ios{
+    padding: 0px;
+  }
+  .card-content-ios {
+    padding: 0px 16px 0px;
+  }
+  .scroll-content{
+    background-color: #F3F3F3;
+  }
+
+  .button-ios-light {
+    font-size: 1rem;
+    background-color: gray;
+    color: white;
+    height: 15px;
+  }
+  .button-ios-danger,
+  .button-ios-secondary{
+    font-size: 1rem;
+    height: 15px;
+  }
+  .button-round-ios{
+    border-radius:64px;
+    padding: 0 1rem;
+  }
+
+  ion-fab[bottom]{
+    bottom: 100px;
+  }
+}

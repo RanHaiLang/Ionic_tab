@@ -1,0 +1,36 @@
+page-create-wuzijihua {
+  .grid:nth-child(1) .row{
+    line-height: 30px;
+  }
+  .grid:nth-child(1) .row:nth-child(1) {
+    border-bottom: 1px solid #F0EEF4;
+  }
+  ion-input{
+    height:30px;
+  }
+  ion-grid:nth-child(1) .text-input{
+    border-bottom: 0px;
+  }
+  .text-input{
+    margin-top: 0px;
+    border-bottom: 1px solid gray;
+  }
+  ion-grid:nth-child(1) .text-input{
+    text-align: right;
+  }
+  .grid i{
+    color: #c8c7cc;
+  }
+  .grid{
+    border-bottom: 1px solid #C8C7CC;
+  }
+  .grid:nth-child(1){
+    border-bottom: 0px;
+  }
+  .row{
+    margin-left: 5%;
+  }
+  .row ion-col:nth-child(1){
+    color: gray;
+  }
+}

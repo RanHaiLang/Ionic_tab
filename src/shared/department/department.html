@@ -1,0 +1,40 @@
+<div class="one_div">
+  <div class="abroad_div">
+    <div class="top_div">
+      <ion-icon name="ios-arrow-back" (tap)="dismiss('')"></ion-icon>
+      <div class="title_div"><span>部门</span></div>
+    </div>
+    <ion-searchbar placeholder="搜索"
+                   showCancelButton="true"
+                   cancelButtonText="取消"
+                   animated="true"
+                   debounce="2000"
+                   (ionInput)="getItems($event)">
+    </ion-searchbar>
+    <ion-content>
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="下拉刷新"
+          refreshingSpinner="circles"
+          refreshingText="正在刷新...">
+        </ion-refresher-content>
+      </ion-refresher>
+      <ion-row>
+        <ion-col col-4>编号</ion-col>
+        <ion-col>部门</ion-col>
+      </ion-row>
+      <ion-row (tap)="dismiss('无')">
+        <ion-col>========无========</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let y of supplier" (tap)="dismiss(y)">
+        <ion-col col-4>{{y.com_code}}</ion-col>
+        <ion-col>{{y.com_desc}}</ion-col>
+      </ion-row>
+      <div style="text-align: center;background-color: gainsboro;" *ngIf="f==true">以显示全部</div>
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </ion-content>
+  </div>
+</div>

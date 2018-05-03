@@ -1,0 +1,25 @@
+page-gongzuoxukezheng-xukejianchaxiang {
+  .list-header{
+    background-color: #EBEBEB;
+    border-bottom: 0px;
+  }
+  .list-header i{
+    color: #007aff;
+  }
+  .grid .row {
+    line-height: 15px;
+  }
+  .label-ios{
+    margin: 0px;
+  }
+  .grid .row:nth-child(2){
+    margin-left: 2%;
+    color: gray;
+  }
+  .grid{
+    border-bottom: 1px solid #C8C7CC;
+    width: 96%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

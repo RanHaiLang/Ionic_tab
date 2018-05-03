@@ -1,0 +1,36 @@
+page-gaizaogongdan-huodong-detail {
+  .list-header{
+    background-color: #EBEBEB;
+    border-bottom: 0px;
+  }
+  .list-header i{
+    color: #007aff;
+  }
+  ion-grid:nth-child(1) .row {
+    line-height: 30px;
+    margin-left: 5%;
+  }
+  .row{
+    margin-left: 5%;
+  }
+
+
+  ion-row ion-col:nth-child(1){
+    color: gray;
+  }
+  ion-input{
+    height:30px;
+  }
+  .text-input{
+    margin-top: 0px;
+    text-align: right;
+  }
+  ion-grid:nth-child(1) ion-row{
+    border-bottom: 1px solid #C8C7CC;
+  }
+  ion-grid:nth-child(1) ion-row:nth-child(2) ion-col,
+  ion-grid:nth-child(1) ion-row:nth-child(3) ion-col,
+  ion-grid:nth-child(1) ion-row:nth-child(4) ion-col{
+    color: black;
+  }
+}

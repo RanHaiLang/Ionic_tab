@@ -1,0 +1,49 @@
+<!--
+  Generated template for the BeijianmingxiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (click)="backPage()"></ion-icon>
+    <div class="title_div"><span>备件明细</span></div>
+    <ion-icon name="menu" menuToggle></ion-icon>
+  </div>
+  <ion-searchbar placeholder="搜索"
+                 showCancelButton="true"
+                 cancelButtonText="取消"
+                 (ionInput)="getItems($event)">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>
+    <i class="iconfont">&#xe609;&nbsp;备件明细</i>
+  </ion-list-header>
+  <ion-list>
+    <ion-grid *ngFor="let g of beijianmingxiList">
+      <ion-row>
+        <ion-col col-4>物资编号:</ion-col><ion-col col-8>{{g.code}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>物资名称:</ion-col><ion-col col-8>{{g.name}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>型号:</ion-col><ion-col col-8>{{g.version}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>规格参数:</ion-col><ion-col col-8>{{g.guige}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>申请数量:</ion-col><ion-col col-8>{{g.znumber}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>库存数量:</ion-col><ion-col col-8>{{g.knumber}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>参考价格:</ion-col><ion-col col-8>{{g.knumber}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

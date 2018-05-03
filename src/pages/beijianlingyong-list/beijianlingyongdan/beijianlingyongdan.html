@@ -1,0 +1,24 @@
+<!--
+  Generated template for the BeijianlingyongdanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-menu id="beijianlingyongId" [content]="menuContents" side="right">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>备件领用单</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let b of beijianpages" (click)="openPage(b)">
+        {{b.titles}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav #menuContents [root]="rootPage"></ion-nav>

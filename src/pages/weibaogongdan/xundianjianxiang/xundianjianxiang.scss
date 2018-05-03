@@ -1,0 +1,23 @@
+page-xundianjianxiang {
+  .row {
+    line-height: 30px;
+    margin-left: 5%;
+  }
+  ion-row ion-col:nth-child(1){
+    color: gray;
+  }
+  ion-input{
+    height:30px;
+  }
+  .text-input{
+    margin-top: 0px;
+    text-align: right;
+  }
+  .grid i{
+    color: #c8c7cc;
+  }
+  ion-grid:nth-child(1) ion-row:nth-child(1){
+    border-bottom: 1px solid #C8C7CC;
+  }
+
+}

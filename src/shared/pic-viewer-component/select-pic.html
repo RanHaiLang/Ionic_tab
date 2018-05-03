@@ -1,0 +1,13 @@
+<div class="clear-fix" *ngIf="fileObjList">
+  <div *ngFor="let fileObj of fileObjList, let i = index" class="pictures"> <!--(press) = "deletePicture(i)"-->
+    <span *ngIf="allowDelete" class="remove" (tap)="deletePicture(i,fileObj.id)">×</span>
+    <img *ngIf="fileObj.suffix=='jpg'||fileObj.suffix=='JPG'||fileObj.suffix=='png'||fileObj.suffix=='PNG'
+        ||fileObj.suffix=='jpeg'||fileObj.suffix=='JPEG'||fileObj.suffix=='gif'||fileObj.suffix=='GIF'"
+          src="{{fileObj.thumbPath}}" (tap)="viewerPicture(i)">
+    <video *ngIf="fileObj.suffix=='mp4'||fileObj.suffix=='MP4'||fileObj.suffix=='mov'||fileObj.suffix=='MOV'" src="{{fileObj.thumbPath}}" (tap)="nativeService.playVideo(fileObj.thumbPath)"></video>
+  </div>
+  <!-- *ngIf="fileObjList.length<max&&allowAdd"-->
+  <div (tap)="addPicture()" class="pictures add">
+    <ion-icon name="camera"></ion-icon>
+  </div>
+</div>

@@ -1,0 +1,135 @@
+<!--
+  Generated template for the GongzuoxukezhengMessagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <div class="top_div">
+    <ion-icon name="ios-arrow-back" (tap)="backPage()" title="返回"></ion-icon>
+    <div class="title_div"><span>工作许可证</span></div>
+    <ion-icon name="menu" menuToggle></ion-icon>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <div class="margin_div" *ngIf="gzxkzgdDetail.evt_rstatus=='C'||buttons.length==1"></div>
+  <form [formGroup]="MessageForm">
+    <ion-list-header>
+      <i class="iconfont">&#xe601;&nbsp;许可证信息</i>
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-auto>单号：</ion-col>
+        <ion-col><ion-input readonly="true" formControlName="evt_code"></ion-input></ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row (tap)="getJobNumber()">
+        <ion-col col-auto><span style="color: red">*</span>工单号：</ion-col>
+        <ion-col><ion-input readonly="true" formControlName="evt_parent"></ion-input></ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><span style="color: red">*</span>许可证描述：</ion-col>
+        <ion-col>
+          <ion-input formControlName="evt_desc"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row (tap)="getYouzhan()">
+        <ion-col col-auto><span style="color: red">*</span>油站名称：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="des_text"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row (tap)="getExminer()">
+        <ion-col col-auto><span style="color: red">*</span>检查人：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="per_descperson"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto>状态：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="uco_desc"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row (tap)="getLicenseCategory()">
+        <ion-col col-auto><span style="color: red">*</span>许可证分类：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="uco_desc2"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><span style="color: red">*</span>施工区域：</ion-col>
+        <ion-col>
+          <ion-input formControlName="evt_udfchar01"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row (tap)="getRisk()">
+        <ion-col col-auto><span style="color: red">*</span>风险等级：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="uco_desc3"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row (tap)="openTime('evt_start')">
+        <ion-col col-auto>开始时间：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="evt_start"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto>失效时间：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="evt_completed"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row (tap)="getSupplier()">
+        <ion-col col-auto><span style="color: red">*</span>供应商：</ion-col>
+        <ion-col>
+          <ion-input readonly="true" formControlName="com_desc"></ion-input>
+        </ion-col>
+        <ion-col col-1><i class="iconfont">&#xe61e;</i></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-auto><span style="color: red">*</span>施工内容介绍：</ion-col>
+        <ion-col>
+          <ion-input formControlName="evt_workaddress"></ion-input>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list-header>
+      <i class="iconfont">&#xe633;&nbsp;附加图片</i>
+    </ion-list-header>
+    <page-select-pic [(fileObjList)]="filePaths"></page-select-pic>
+
+    <ion-list-header (tap)="BeizhuClick(1)" *ngIf="temp==false">
+      <i class="iconfont">&#xe705;&nbsp;审批意见</i>
+    </ion-list-header>
+    <ion-list-header (tap)="BeizhuClick(2)" *ngIf="temp==true">
+      <i class="iconfont">&#xe706;&nbsp;审批意见</i>
+    </ion-list-header>
+    <ion-grid *ngIf="temp==true">
+      <ion-row *ngFor="let x of XKZOpinion">
+        <ion-col col-7>{{x.add_text}}</ion-col>
+        <ion-col col-5>{{x.add_user}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+<ion-footer>
+  <div class="footerDiv">
+    <button ion-button  *ngIf="gzxkzgdDetail.evt_rstatus!='C'&&buttons.length>1" (tap)="updatexkz()">保存</button>
+    <button ion-button (tap)="StatusButton()">流程审批</button>
+  </div>
+</ion-footer>

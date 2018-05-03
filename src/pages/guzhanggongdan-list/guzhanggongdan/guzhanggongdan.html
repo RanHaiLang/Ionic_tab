@@ -1,0 +1,24 @@
+<!--
+  Generated template for the GuzhanggongdanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-menu id="guzhanggongdanId" [content]="menuContent" side="right">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>故障工单</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav #menuContent [root]="rootPage"></ion-nav>
